@@ -6,7 +6,6 @@
 		"format": "{}",
 		"exec": "playerctl metadata title",
 		"restart-interval": 1,
-		"max-length": 30,
 		"on-scroll-up": "playerctl volume 0.05+",
 		"on-scroll-down": "playerctl volume 0.05-",
 		"on-click": "playerctl play-pause",
