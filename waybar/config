@@ -1,0 +1,31 @@
+{
+	// Position (Top)
+	"layer": "top",
+	"margin-top": 8,
+	"margin-bottom": -15,
+	"margin-left": 8,
+	"margin-right": 16,    
+	"spacing": 10,
+
+	// Includes
+	"include": [
+		"~/dotfiles/waybar/modules.json"
+	],
+
+	"modules-left": [
+		"hyprland/workspaces",
+		"hyprland/window"
+	],
+
+	"modules-center": [
+	],
+
+	"modules-right": [
+		"custom/music",
+		"network",
+		"pulseaudio",
+		"tray",
+		"clock"
+	]
+
+}

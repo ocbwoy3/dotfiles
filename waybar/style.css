@@ -1,0 +1,115 @@
+/* Global */
+
+* {
+	font-family: 'Symbols Nerd Font', 'Monaspace Neon', 'monospace', monospace;
+	border: none;
+	border-radius: 0px;
+}
+
+/* Waybar */
+
+window#waybar {
+	border-bottom: 0px solid #ffffff;
+	background: transparent;
+	transition-property: background-color;
+	transition-duration: .5s;
+}
+
+/* Tooltips */
+
+tooltip {
+    border-radius: 15px;
+    background-color: #555555;
+    opacity:0.8;
+    padding:20px;
+    margin:5px;
+}
+
+tooltip label {
+	color: #ffffff;
+}
+
+/* Workspace Selector */
+
+#workspaces {
+	background: transparent;
+	margin-left: 5px;
+	margin-right: 5px;
+	border: 0px;
+	color: #aaaaaa;
+	font-weight: 900;
+}
+
+#workspaces button {
+	color: #aaaaaa;
+}
+
+#workspaces button.active {
+	color: #ffffff;
+}
+
+#workspaces button:hover {
+	color: #ffffff;
+	background: transparent;
+}
+
+/* Window Title */
+
+#window {
+	color: #ffffff;
+}
+
+window#waybar.empty #window {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	opacity: 0;
+}
+
+/* Modules */
+
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+/* Clock */
+
+#clock {
+	color: #ffffff;
+}
+
+/* PulseAudio */
+
+#pulseaudio {
+	color: #ffffff;
+}
+
+/* Network */
+
+#network {
+	color: #ffffff;
+}
+
+/* Tray */
+
+#tray {
+	padding: 0px 2px 0px 2px;
+}
+
+#tray > .passive {
+	-gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+	-gtk-icon-effect: highlight;
+}
+
+/* Music */
+
+#custom-music {
+	color: #ffffff;
+	padding-right: 5px;
+}
