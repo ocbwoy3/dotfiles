@@ -79,6 +79,7 @@ window#waybar.empty #window {
 
 #clock {
 	color: #ffffff;
+	font-weight: bolder;
 }
 
 /* PulseAudio */

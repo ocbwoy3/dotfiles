@@ -47,8 +47,8 @@
 	},
 
 	"clock": {
-		"format": "{:%H:%M %a}",
-		"tooltip-format": "{:%d %B %Y}",
+		"format": "{:%H:%M}",
+		"tooltip-format": "{:%A %d %B %Y}",
 		"format-alt": "{:%Y-%m-%d}"
 	},
 
