@@ -9,9 +9,9 @@
 /* Waybar */
 
 window#waybar {
-	border-bottom: 0px solid #ffffff;
+	border-bottom: 0px solid transparent;
 	background: transparent;
-	transition-property: background-color;
+	transition-property: background;
 	transition-duration: .5s;
 }
 

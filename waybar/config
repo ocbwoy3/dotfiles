@@ -2,9 +2,9 @@
 	// Position (Top)
 	"layer": "top",
 	"margin-top": 8,
-	"margin-bottom": -15,
+	"margin-bottom": -16,
 	"margin-left": 8,
-	"margin-right": 16,    
+	"margin-right": 8,    
 	"spacing": 10,
 
 	// Includes
