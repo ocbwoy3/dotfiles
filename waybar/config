@@ -23,6 +23,7 @@
 	"modules-right": [
 		"custom/music",
 		"network",
+		"bluetooth",
 		"pulseaudio",
 		"tray",
 		"clock"

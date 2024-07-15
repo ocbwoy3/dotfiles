@@ -55,18 +55,12 @@
 
 	"pulseaudio": {
 		"format": "{icon}  {volume}%",
-		"format-bluetooth": "{volume}%  {icon} {format_source}",
-		"format-bluetooth-muted": " {icon} {format_source}",
-		"format-muted": "󰖁 {format_source}",
-		"format-source": "{volume}% ",
+		"format-bluetooth": "{icon} {format_source}",
+		"format-bluetooth-muted": " {icon} {format_source}",
+		"format-muted": "󰖁  {format_source}",
+		"format-source": " {volume}%",
 		"format-source-muted": "",
 		"format-icons": {
-			"headphone": "",
-			"hands-free": "",
-			"headset": "",
-			"phone": "",
-			"portable": "",
-			"car": "",
 			"default": ["", "", ""]
 		},
 		"on-click": "pavucontrol"
@@ -84,6 +78,20 @@
 		"max-length": 50
 		//"on-click": "alacritty -e nmtui",
 		//"on-click-right": "~/dotfiles/.settings/networkmanager.sh"
+	},
+
+	"bluetooth": {
+		"format": "",
+		"format-disabled": "󰂲",
+		"format-off": "",
+		"interval": 1,
+		"on-click": "blueman-manager",
+		"format-no-controller": ""
+	},
+
+	"custom/discord": {
+		"format": "",
+		"on-click": "flatpak run dev.vencord.Vesktop"
 	}
 
 }
