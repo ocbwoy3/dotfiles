@@ -4,7 +4,7 @@
 
 	"custom/music": {
 		"format": "{}",
-		"exec": "playerctl metadata title",
+		"exec": "bash ~/dotfiles/scripts/waybar-music-status.sh",
 		"restart-interval": 1,
 		"on-scroll-up": "playerctl volume 0.05+",
 		"on-scroll-down": "playerctl volume 0.05-",

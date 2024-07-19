@@ -1,6 +1,6 @@
 # Change according to your locale. $HOME/Pictures/Screenshots
 
-DIR="$HOME/Attēli/Ekrānuzņēmumi/"
+DIR="$HOME/Pictures/Screenshots/"
 NAME="$(date +%d%m%Y_%H%M%S).png"
 
 monitor="$(hyprctl monitors | awk '/Monitor/{monitor=$2} /focused: yes/{print monitor; exit}')"
