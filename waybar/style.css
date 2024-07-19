@@ -94,6 +94,13 @@ window#waybar.empty #window {
 	color: #ffffff;
 }
 
+/* Bluetooth */
+
+#bluetooth {
+	color: #ffffff;
+}
+
+
 /* Tray */
 
 #tray {
