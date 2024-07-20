@@ -49,9 +49,8 @@ _installDependencies() {
 	sudo pacman -S alacritty bluez bluez-utils blueman
 	sudo pacman -S pulseaudio pulseaudio-bluetooth pavucontrol
 	sudo pacman -S wl-clipboard xclip swappy playerctl flatpak
-	sudo pacman -S sddm esbuild
+	sudo pacman -S sddm esbuild fuse
 
-	yay -S aylurs-gtk-shell
 	yay -S wlogout
 
 	flatpak install dev.vencord.Vesktop
@@ -80,12 +79,6 @@ _setSymlinks() {
 
 }
 
-_setupAGS() {
-	cd $HOME/dotfiles/ags
-	ags --init
-	cd $CWD
-}
-
 _abortInstall() {
 	echo "Aborting"
 	exit
@@ -107,7 +100,6 @@ if [ "$EUID" -ne 0 ]; then
 	# _backupPreviousDotfiles
 	_gitCloneRepo
 	_installDependencies
-	_setupAGS
 
 	echo "OCbwoy3's Dotfiles have been successfully installed. A reboot is recommended."
 else
