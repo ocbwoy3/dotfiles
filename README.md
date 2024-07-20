@@ -1,6 +1,12 @@
-This is my attempt at ricing Hyprland. (wip)
+# OCbwoy3's Dotfiles
 
-![Preview](https://cdn.ocbwoy3.dev/assets/rice.png)
+This is my attempt at ricing Hyprland.
+
+## Install (wip)
+
+```bash
+curl https://raw.githubusercontent.com/ocbwoy3/dotfiles/main/scripts/install.sh > /tmp/dotfiles.sh && chmod +x /tmp/dotfiles.sh && ./tmp/dotfiles.sh
+```
 
 - [ ] Rice
     - [x] Hyprland
@@ -15,35 +21,3 @@ This is my attempt at ricing Hyprland. (wip)
     - [ ] Installer script
     - [ ] Customization app
     - [ ] Probably a bunch more features
-
-# How to set up:
-
-1. Install:
-
-    - hyprland
-    - hyprpaper
-    - hyprlock
-    - xdg-desktop-portal-hyprland
-    - waybar
-    - playerctl
-    - grim
-    - xclip
-    - dunst
-    - polkit (polkit-gnome-authentication-agent-1)
-    - wl-paste
-    - libnotify
-    - nerd fonts
-    - brightnessctl
-    - pulseaudio
-    - pactl
-    - alacritty
-    - gtk
-    - monaspace fonts
-    - pipewire
-    - wireplumber
-    - nautilus
-    - rofi
-
-2. Git clone this repository into `~/dotfiles`
-3. Delete `~/.config/hypr` and `~/.config/alacritty` and `.config/waybar`
-4. Make symlinks for folders from `~/dotfiles/` into `~/.config/` (like `~/dotfiles/hypr` -> `~/.config/hypr`)
