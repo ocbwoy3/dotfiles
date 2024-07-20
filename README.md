@@ -15,9 +15,8 @@ curl https://raw.githubusercontent.com/ocbwoy3/dotfiles/main/scripts/install.sh 
     - [ ] Hyprlock
     - [ ] Hyprpaper
     - [ ] GTK
-    - [ ] ZSH (Moving away from bash)
 - [ ] Features
     - [x] Screenshot script
-    - [ ] Installer script
-    - [ ] Customization app
+    - [x] Installer script
+    - [ ] Control Panel
     - [ ] Probably a bunch more features
