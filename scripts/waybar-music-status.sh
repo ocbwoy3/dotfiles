@@ -3,7 +3,7 @@
 SONG="$(playerctl metadata title -s)"
 
 if [ ${#SONG} -gt 1 ] ; then
-    echo "$(playerctl metadata artist) — $SONG"
+    printf "$(playerctl metadata artist) — $SONG" | sed -r 's/\&/\&amp;/g' | sed -r 's/\"/\&quot;/g' | sed -r "s/'/\&apos;/g"
 else
-    echo ""
+    printf ""
 fi

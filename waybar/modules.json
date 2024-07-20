@@ -10,7 +10,8 @@
 		"on-scroll-down": "playerctl volume 0.05-",
 		"on-click": "playerctl play-pause",
 		"on-click-right": "playerctl next",
-		"on-click-middle": "playerctl previous"
+		"on-click-middle": "playerctl previous",
+		"smooth-scrolling-treshold": 40
 	},
 
 	// Default modules
@@ -87,11 +88,6 @@
 		"interval": 1,
 		"on-click": "blueman-manager",
 		"format-no-controller": ""
-	},
-
-	"custom/discord": {
-		"format": "",
-		"on-click": "flatpak run dev.vencord.Vesktop"
 	}
 
 }
