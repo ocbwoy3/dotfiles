@@ -4,10 +4,11 @@ CWD=$(pwd)
 
 _backupPreviousDotfiles() {
 	if [[ -d "$HOME/dotfiles" ]]; then
-		echo "Found existing dotfiles, backing up"
+		echo "Found an existing existing dotfiles folder, backing up."
 		sudo cp -r $HOME/dotfiles $HOME/dotfiles_old
-		sudo rm -rf $HOME/dotfiles
 		echo "Your current dotfiles have been backed up to $HOME/dotfiles_old"
+		read -e -p "Press enter to continue installing... " choice
+		sudo rm -rf $HOME/dotfiles
 	else
 		echo "Could not find dotfiles folder, ignoring backup"
 	fi
@@ -84,22 +85,34 @@ _abortInstall() {
 	exit
 }
 
-echo "The Install script for for OCbwoy3's Dotfiles is Work in Progress."
-echo "THIS MAY OR MAY NOT BRICK YOUR SYSTEM OR DELETE YOUR DOTFILES. PLEASE USE THIS WITH CAUTION!"
+clear
+echo "This is the installer script for OCbwoy3's dotfiles."
+echo "This may or may not break your installation, please use with caution!!!!"
 echo "IT IS RECOMMENDED TO RUN THIS IN A BRAND NEW INSTALL OF ARCH LINUX." 
 
 read -e -p "Do you want to continue? [y/N] > " choice
 [[ "$choice" == [Yy]* ]] && echo "" || _abortInstall 
 
 if [ "$EUID" -ne 0 ]; then
-	echo "OCbwoy3's Dotfiles Installer"
+	
+	clear
 
+	echo "Installing prerequisites"
 	_installGit
 	_installYay
 
-	# _backupPreviousDotfiles
+	clear
+
+	echo "Installing OCbwoy3's dotfiles"
+	_backupPreviousDotfiles
 	_gitCloneRepo
+	
+	clear
+	
+	echo "Installing dependencies"
 	_installDependencies
+
+
 
 	echo "OCbwoy3's Dotfiles have been successfully installed. A reboot is recommended."
 else
