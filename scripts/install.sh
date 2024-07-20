@@ -50,7 +50,8 @@ _installDependencies() {
 	sudo pacman -S alacritty bluez bluez-utils blueman
 	sudo pacman -S pulseaudio pulseaudio-bluetooth pavucontrol
 	sudo pacman -S wl-clipboard xclip swappy playerctl flatpak
-	sudo pacman -S sddm esbuild fuse
+	sudo pacman -S sddm esbuild fuse polkit-gnome
+	sudo pacman -S xdg-desktop-portal xdg-desktop-portal-hyprland
 
 	yay -S wlogout
 
