@@ -28,7 +28,7 @@ _gitCloneWallpaperRepo() {
 		echo "Wallpaper folder folder already exists"
 	else
 		echo "Git cloning the wallpapers"
-		git clone --depth=1 https://github.com/mylinuxforwork/wallpaper $HOME/dotfiles/wallpaper
+		git clone --depth=1 https://github.com/mylinuxforwork/wallpaper $HOME/wallpaper
 	fi
 }
 
