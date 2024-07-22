@@ -12,11 +12,11 @@ curl https://raw.githubusercontent.com/ocbwoy3/dotfiles/main/scripts/install.sh 
     - [x] Hyprland
     - [x] Waybar
     - [x] Alacritty
+    - [x] SWWW (Wallpaper)
     - [ ] Hyprlock
-    - [ ] Hyprpaper
-    - [ ] GTK
+    
 - [ ] Features
     - [x] Screenshot script
     - [x] Installer script
-    - [ ] Control Panel
-    - [ ] Probably a bunch more features
+    - [x] Theme Switcher
+    - [ ] Settings Panel

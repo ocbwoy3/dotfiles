@@ -4,7 +4,7 @@ CWD=$(pwd)
 
 _backupPreviousDotfiles() {
 	if [[ -d "$HOME/dotfiles" ]]; then
-		echo "Found an existing existing dotfiles folder, backing up."
+		echo "Found an existing dotfiles folder, backing up."
 		sudo cp -r $HOME/dotfiles $HOME/dotfiles_old
 		echo "Your current dotfiles have been backed up to $HOME/dotfiles_old"
 		read -e -p "Press enter to continue installing... " choice
@@ -20,12 +20,19 @@ _gitCloneRepo() {
 	else
 		echo "Git cloning the dotfiles"
 		git clone https://github.com/ocbwoy3/dotfiles $HOME/dotfiles
-
-		echo "Git cloning wallpapers"
-		git clone --depth=1 https://github.com/mylinuxforwork/wallpaper $HOME/dotfiles/wallpaper
-
 	fi
 }
+
+_gitCloneWallpaperRepo() {
+	if [[ -d "$HOME/wallpaper" ]]; then
+		echo "Wallpaper folder folder already exists"
+	else
+		echo "Git cloning the wallpapers"
+		git clone --depth=1 https://github.com/mylinuxforwork/wallpaper $HOME/dotfiles/wallpaper
+	fi
+}
+
+
 
 _installGit() {
 	if [[ -f "/usr/bin/git" ]]; then
@@ -92,8 +99,7 @@ _abortInstall() {
 
 clear
 echo "This is the installer script for OCbwoy3's dotfiles."
-echo "This may or may not break your installation, please use with caution!!!!"
-echo "IT IS RECOMMENDED TO RUN THIS IN A BRAND NEW INSTALL OF ARCH LINUX." 
+echo "This will only work in Arch-Based distros which let you install packages from the AUR." 
 
 read -e -p "Do you want to continue? [y/N] > " choice
 [[ "$choice" == [Yy]* ]] && echo "" || _abortInstall 
@@ -112,6 +118,8 @@ if [ "$EUID" -ne 0 ]; then
 	_backupPreviousDotfiles
 	_gitCloneRepo
 	
+	_gitCloneWallpaperRepo
+
 	clear
 	
 	echo "Installing dependencies"
