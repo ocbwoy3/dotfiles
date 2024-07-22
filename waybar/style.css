@@ -1,5 +1,7 @@
 /* Global */
 
+@import '../../.cache/wal/colors-waybar.css';
+
 * {
 	font-family: 'Symbols Nerd Font', 'Monaspace Neon', 'monospace', monospace;
 	border: none;
@@ -11,7 +13,7 @@
 window#waybar {
 	border-bottom: 0px solid transparent;
 	background: transparent;
-	transition-property: background;
+	transition-property: all;
 	transition-duration: .5s;
 }
 
@@ -19,14 +21,14 @@ window#waybar {
 
 tooltip {
     border-radius: 15px;
-    background-color: #555555;
+    background-color: @background;
     opacity:0.8;
     padding:20px;
     margin:5px;
 }
 
 tooltip label {
-	color: #ffffff;
+	color: @color6;
 }
 
 /* Workspace Selector */
@@ -36,27 +38,27 @@ tooltip label {
 	margin-left: 5px;
 	margin-right: 5px;
 	border: 0px;
-	color: #aaaaaa;
+	color: @color6;
 	font-weight: 900;
 }
 
 #workspaces button {
-	color: #aaaaaa;
+	color: @color6;
 }
 
 #workspaces button.active {
-	color: #ffffff;
+	color: @color8;
 }
 
 #workspaces button:hover {
-	color: #ffffff;
+	color: @color6;
 	background: transparent;
 }
 
 /* Window Title */
 
 #window {
-	color: #ffffff;
+	color: @color6;
 }
 
 window#waybar.empty #window {
@@ -78,26 +80,26 @@ window#waybar.empty #window {
 /* Clock */
 
 #clock {
-	color: #ffffff;
+	color: @color6;
 	font-weight: bolder;
 }
 
 /* PulseAudio */
 
 #pulseaudio {
-	color: #ffffff;
+	color: @color6;
 }
 
 /* Network */
 
 #network {
-	color: #ffffff;
+	color: @color6;
 }
 
 /* Bluetooth */
 
 #bluetooth {
-	color: #ffffff;
+	color: @color6;
 }
 
 
@@ -118,6 +120,6 @@ window#waybar.empty #window {
 /* Music */
 
 #custom-music {
-	color: #ffffff;
+	color: @color6;
 	padding-right: 5px;
 }

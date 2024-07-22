@@ -20,6 +20,10 @@ _gitCloneRepo() {
 	else
 		echo "Git cloning the dotfiles"
 		git clone https://github.com/ocbwoy3/dotfiles $HOME/dotfiles
+
+		echo "Git cloning wallpapers"
+		git clone --depth=1 https://github.com/mylinuxforwork/wallpaper $HOME/dotfiles/wallpaper
+
 	fi
 }
 
@@ -50,7 +54,7 @@ _installDependencies() {
 	sudo pacman -S alacritty bluez bluez-utils blueman
 	sudo pacman -S pulseaudio pulseaudio-bluetooth pavucontrol
 	sudo pacman -S wl-clipboard xclip swappy playerctl flatpak
-	sudo pacman -S sddm esbuild fuse polkit-gnome
+	sudo pacman -S sddm esbuild fuse polkit-gnome swww python-pywal
 	sudo pacman -S xdg-desktop-portal xdg-desktop-portal-hyprland
 
 	yay -S wlogout
