@@ -79,8 +79,8 @@ _setSymlinks() {
 	cd $HOME/.config
 
 	unlink alacritty
-	lunlink hypr
-	lunlink waybar
+	unlink hypr
+	unlink waybar
 
 	ln -s alacritty $HOME/dotfiles/alacritty
 	ln -s hypr $HOME/dotfiles/hypr
