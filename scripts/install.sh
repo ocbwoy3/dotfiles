@@ -103,14 +103,10 @@ read -e -p "Do you want to continue? [y/N] > " choice
 [[ "$choice" == [Yy]* ]] && echo "" || _abortInstall 
 
 if [ "$EUID" -ne 0 ]; then
-	
-	clear
 
 	echo "Installing prerequisites"
 	_installGit
 	_installYay
-
-	clear
 
 	echo "Installing OCbwoy3's dotfiles"
 	_backupPreviousDotfiles
@@ -118,13 +114,9 @@ if [ "$EUID" -ne 0 ]; then
 	_setSymlinks
 	
 	_gitCloneWallpaperRepo
-
-	clear
 	
 	echo "Installing dependencies"
 	_installDependencies
-
-
 
 	echo "OCbwoy3's Dotfiles have been successfully installed. A reboot is recommended."
 else
