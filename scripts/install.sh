@@ -50,9 +50,9 @@ _installYay() {
 		echo "Installing yay"
 		git clone https://aur.archlinux.org/yay.git /tmp/.yay_install
 		cd /tmp/.yay_install
-		sudo makepkg -si
+		makepkg -si
 		cd $CWD
-		sudo rm -rf /tmp/yay
+		sudo rm -rf /tmp/.yay_install
 	fi
 }
 
