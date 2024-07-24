@@ -80,13 +80,11 @@ _setSymlinks() {
 
 	trap unlink alacritty EXIT
 	trap unlink hypr EXIT
-	trap unlink ags EXIT
 	trap unlink waybar EXIT
 
 	ln -s alacritty $HOME/dotfiles/alacritty
 	ln -s hypr $HOME/dotfiles/hypr
 	ln -s waybar $HOME/dotfiles/waybar
-	ln -s ags $HOME/dotfiles/ags
 
 	cd $CWD
 
