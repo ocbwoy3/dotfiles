@@ -115,6 +115,7 @@ if [ "$EUID" -ne 0 ]; then
 	echo "Installing OCbwoy3's dotfiles"
 	_backupPreviousDotfiles
 	_gitCloneRepo
+	_setSymlinks
 	
 	_gitCloneWallpaperRepo
 
