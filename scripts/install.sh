@@ -78,9 +78,9 @@ _installDependencies() {
 _setSymlinks() {
 	cd $HOME/.config
 
-	trap unlink alacritty EXIT
-	trap unlink hypr EXIT
-	trap unlink waybar EXIT
+	unlink alacritty
+	lunlink hypr
+	lunlink waybar
 
 	ln -s alacritty $HOME/dotfiles/alacritty
 	ln -s hypr $HOME/dotfiles/hypr
