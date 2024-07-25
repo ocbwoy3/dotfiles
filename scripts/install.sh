@@ -2,6 +2,34 @@
 
 CWD=$(pwd)
 
+_symlink() {
+    name="$1"
+    llink="$2";
+    lsource="$3";
+    ltarget="$4";
+    
+    if [ -L "${llink}" ]; then
+        rm ${llink}
+        ln -s ${lsource} ${ltarget} 
+        echo "Symlinked ${lsource} -> ${ltarget}"
+    else
+        if [ -d ${llink} ]; then
+            rm -rf ${llink}/ 
+            ln -s ${lsource} ${ltarget}
+            echo "Symlinked dir ${lsource} -> ${ltarget}"
+        else
+            if [ -f ${llink} ]; then
+                rm ${llink} 
+                ln -s ${lsource} ${ltarget} 
+                echo "Symlinked file ${lsource} -> ${ltarget}"
+            else
+                ln -s ${lsource} ${ltarget} 
+                echo "Symlinked ${lsource} -> ${ltarget}"
+            fi
+        fi
+    fi
+}
+
 _backupPreviousDotfiles() {
 	if [[ -d "$HOME/dotfiles" ]]; then
 		echo "Found an existing dotfiles folder, backing up."
@@ -78,13 +106,9 @@ _installDependencies() {
 _setSymlinks() {
 	cd $HOME/.config
 
-	unlink alacritty
-	unlink hypr
-	unlink waybar
-
-	ln -s alacritty $HOME/dotfiles/alacritty
-	ln -s hypr $HOME/dotfiles/hypr
-	ln -s waybar $HOME/dotfiles/waybar
+	_symlink alacritty ~/.config/alacritty $HOME/dotfiles/alacritty ~/.config
+	_symlink hypr ~/.config/hypr $HOME/dotfiles/hypr ~/.config
+	_symlink waybar ~/.config/waybar $HOME/dotfiles/waybar ~/.config
 
 	cd $CWD
 
