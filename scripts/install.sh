@@ -121,7 +121,7 @@ _abortInstall() {
 
 clear
 echo "This is the installer script for OCbwoy3's dotfiles."
-echo "This will only work in Arch-Based distros which let you install packages from the AUR." 
+echo "This will only work in Arch-Based distros which let you install packages from the AUR. Install at your own risk." 
 
 read -e -p "Do you want to continue? [y/N] > " choice
 [[ "$choice" == [Yy]* ]] && echo "" || _abortInstall 
