@@ -3,7 +3,7 @@
 	// Custom Modules
 
 	"custom/music": {
-		"format": "{}",
+		"return-type": "json",
 		"exec": "bash ~/dotfiles/scripts/waybar-music-status.sh",
 		"restart-interval": 1,
 		"on-scroll-up": "playerctl volume 0.05+",
