@@ -22,6 +22,7 @@
 			"Cider": "Apple Music",
 			"PORTAL 2 - (.*)": "Portal 2",
 			"SCPSL": "SCP: Secret Laboratory",
+			"Sober": "Roblox",
 			"(.*) — Mozilla Firefox": "$1",
 			"(.*) — Mozilla Firefox Private Browsing": "$1"
 		},
