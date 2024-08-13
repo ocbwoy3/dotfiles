@@ -2,17 +2,23 @@
 
 WALLPAPER=$(ls $HOME/wallpaper/ | wofi --show dmenu)
 
-if [ ${#WALLPAPER} -lt 1] ; then
-	exit
-fi
+if [ ${#WALLPAPER} -gt 0 ] ; then
 
-rm $HOME/.cache/.wallpaper
+	rm -f $HOME/.cache/.wallpaper
 
-echo "$WALLPAPER" >> $HOME/.cache/.wallpaper
+	echo "$WALLPAPER" >> $HOME/.cache/.wallpaper
 
-rm -r $HOME/.cache/wal
+	rm -rf $HOME/.cache/wal
 
-wal -stn -a 90 -i $HOME/wallpaper/$WALLPAPER
+	notify-send -t 2000 -u low -h int:value:50 "OCbwoy3's Dotfiles" "Calculating color scheme"
 
-swww img $HOME/wallpaper/$WALLPAPER --transition-step 120 --transition-fps 120 --transition-type grow --transition-pos top-right --transition-duration 1.5 &
+	wal -stn -a 90 -i $HOME/wallpaper/$WALLPAPER
+
+	notify-send -t 2000 -u low -h int:value:100 "OCbwoy3's Dotfiles" "Setting wallpaper"
+
+	swww img $HOME/wallpaper/$WALLPAPER --transition-fps 300 --transition-duration 2 &
 bash ~/dotfiles/scripts/hot-reload.sh
+
+else
+	printf "not changing wallpaper\n"
+fi

@@ -6,7 +6,7 @@ family = "Monaspace Neon"
 style = "Normal"
 
 [window]
-opacity = 0.5
+opacity = 0.3
 blur = true
 
 [window.padding]
