@@ -20,9 +20,9 @@
 		"rewrite": {
 			"Code - OSS": "Visual Studio Code",
 			"Cider": "Apple Music",
-			"PORTAL 2 - (.*)": "Portal 2",
 			"SCPSL": "SCP: Secret Laboratory",
 			"Sober": "Roblox",
+			"PORTAL 2 - OpenGL": "Portal 2",
 			"(.*) — Mozilla Firefox": "$1",
 			"(.*) — Mozilla Firefox Private Browsing": "$1"
 		},
@@ -59,7 +59,7 @@
 	"pulseaudio": {
 		"format": "{icon}  {volume}%",
 		"format-bluetooth": "{icon} {volume}%",
-		"format-bluetooth-muted": " {icon} {volume}%",
+		"format-bluetooth-muted": "󰖁 {volume}%",
 		"format-muted": "󰖁  {format_source}",
 		"format-source": " {volume}%",
 		"format-source-muted": "",

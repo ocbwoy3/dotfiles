@@ -89,10 +89,12 @@ _installDependencies() {
 	sudo pacman -S alacritty bluez bluez-utils blueman
 	sudo pacman -S pulseaudio pulseaudio-bluetooth pavucontrol
 	sudo pacman -S wl-clipboard xclip swappy playerctl flatpak
-	sudo pacman -S sddm esbuild fuse polkit-gnome swww python-pywal
+	sudo pacman -S sddm esbuild fuse polkit-gnome swww python-pywal python-pip
 	sudo pacman -S xdg-desktop-portal xdg-desktop-portal-hyprland
 
-	yay -S wlogout
+	yay -S wlogout arrpc linux-discord-rich-presence
+
+	sudo chmod +x $HOME/dotfiles/scripts/rich-presence.py
 
 	flatpak install dev.vencord.Vesktop
 
