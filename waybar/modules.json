@@ -22,6 +22,8 @@
 			"Cider": "Apple Music",
 			"SCPSL": "SCP: Secret Laboratory",
 			"Sober": "Roblox",
+			"Minecraft: Forge Loading...": "Minecraft",
+			"gemini.google.com_/app": "Gemini",
 			"PORTAL 2 - OpenGL": "Portal 2",
 			"(.*) — Mozilla Firefox": "$1",
 			"(.*) — Mozilla Firefox Private Browsing": "$1"
@@ -60,7 +62,7 @@
 		"format": "{icon}  {volume}%",
 		"format-bluetooth": "{icon} {volume}%",
 		"format-bluetooth-muted": "󰖁 {volume}%",
-		"format-muted": "󰖁  {format_source}",
+		"format-muted": "󰖁 {volume}%",
 		"format-source": " {volume}%",
 		"format-source-muted": "",
 		"format-icons": {

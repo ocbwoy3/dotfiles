@@ -10,10 +10,11 @@ def cmd(command) -> str:
 		return process.read()[0:-1]
 
 def update():
-	try:
-		activeWindowTitle = f"🖥️ {json.loads(cmd("hyprctl activewindow -j"))['title']}"
-	except Exception as ex:
-		activeWindowTitle = "🖥️ Hyprland"
+	activeWindowTitle = "🖥️ Hyprland"
+        # try:
+	# 	activeWindowTitle = f"🖥️ {json.loads(cmd("hyprctl activewindow -j"))['title']}"
+	# except Exception as ex:
+	# 	activeWindowTitle = "🖥️ Hyprland"
 
 	try:
 		songTitle = cmd("playerctl metadata title -s")
