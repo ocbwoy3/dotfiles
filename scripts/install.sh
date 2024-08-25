@@ -92,6 +92,7 @@ _installDependencies() {
 	sudo pacman -S sddm esbuild fuse polkit-gnome swww python-pywal python-pip
 	sudo pacman -S xdg-desktop-portal xdg-desktop-portal-hyprland
 
+	sudo pacman -S ttf-nerd-fonts-symbols otf-monaspace
 	yay -S wlogout arrpc linux-discord-rich-presence
 
 	sudo chmod +x $HOME/dotfiles/scripts/rich-presence.py
