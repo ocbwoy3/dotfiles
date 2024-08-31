@@ -24,7 +24,7 @@
 			"Sober": "Roblox",
 			"Minecraft: Forge Loading...": "Minecraft",
 			"gemini.google.com_/app": "Gemini",
-			"PORTAL 2 - OpenGL": "Portal 2",
+			"PORTAL 2 - (OpenGL|Vulkan)": "Portal 2",
 			"(.*) — Mozilla Firefox": "$1",
 			"(.*) — Mozilla Firefox Private Browsing": "$1"
 		},
