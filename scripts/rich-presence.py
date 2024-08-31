@@ -10,7 +10,7 @@ def cmd(command) -> str:
 		return process.read()[0:-1]
 
 def update():
-	activeWindowTitle = "🖥️ Hyprland"
+	activeWindowTitle = f"🖥️ {cmd("pacman -Q hyprland").replace("hyprland","Hyprland")}"
         # try:
 	# 	activeWindowTitle = f"🖥️ {json.loads(cmd("hyprctl activewindow -j"))['title']}"
 	# except Exception as ex:
@@ -48,7 +48,5 @@ def update():
 
 while True:
 	print(json.dumps(update()))
-
 	stdout.flush()
-
-	sleep(2)
+	sleep(1)
