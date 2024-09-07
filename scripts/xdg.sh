@@ -3,13 +3,13 @@
 sleep 1
 
 # kill all possible running xdg-desktop-portals
-killall -e xdg-desktop-portal-hyprland
-killall -e xdg-desktop-portal-gnome
-killall -e xdg-desktop-portal-kde
-killall -e xdg-desktop-portal-lxqt
-killall -e xdg-desktop-portal-wlr
-killall -e xdg-desktop-portal-gtk
-killall -e xdg-desktop-portal
+kill -9 $(pidof xdg-desktop-portal-hyprland)
+kill -9 $(pidof xdg-desktop-portal-gnome)
+kill -9 $(pidof xdg-desktop-portal-kde)
+kill -9 $(pidof xdg-desktop-portal-lxqt)
+kill -9 $(pidof xdg-desktop-portal-wlr)
+kill -9 $(pidof xdg-desktop-portal-gtk)
+kill -9 $(pidof xdg-desktop-portal)
 sleep 1
 
 # start xdg-desktop-portal-hyprland
