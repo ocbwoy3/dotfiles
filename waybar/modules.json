@@ -25,8 +25,9 @@
 			"Minecraft: Forge Loading...": "Minecraft",
 			"gemini.google.com_/app": "Gemini",
 			"PORTAL 2 - (OpenGL|Vulkan)": "Portal 2",
-			"(.*) — Mozilla Firefox": "$1",
-			"(.*) — Mozilla Firefox Private Browsing": "$1"
+			"(.*) - (.*) - Visual Studio Code": "󰨞  $1      $2",
+			"(.*) (— Mozilla Firefox|- Brave)": "$1",
+			"(.*) — (Mozilla Firefox Private Browsing": "$1"
 		},
 		"separate-outputs": true
 	},
