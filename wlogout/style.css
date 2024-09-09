@@ -1,0 +1,55 @@
+* {
+	background-image: none;
+	box-shadow: none;
+}
+
+window {
+	background-color: rgba(24, 24, 24, 0.5);
+}
+
+button {
+    border-radius: 16px;
+	font-family: "Monaspace Neon", "Symbols Nerd Font";
+    border-color: rgb(136, 0, 255);
+	border-width: 2px;
+	text-decoration-color: #b4befe;
+    color: #b4befe;
+	background-color: #1e1e2e;
+	border-style: solid;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25%;
+	margin: 10px;
+}
+
+button:focus, button:active, button:hover {
+	background-color: #313244;
+	color: #b4befe;
+	outline-style: none;
+}
+
+/* Icons */
+
+#lock {
+    background-image: image(url("/nix/store/92rdwiipzag7bix2fzdirxqm41x5dwfn-wlogout-1.2.2/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+}
+
+#logout {
+    background-image: image(url("/nix/store/92rdwiipzag7bix2fzdirxqm41x5dwfn-wlogout-1.2.2/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("/nix/store/92rdwiipzag7bix2fzdirxqm41x5dwfn-wlogout-1.2.2/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+}
+
+#hibernate {
+    background-image: image(url("/nix/store/92rdwiipzag7bix2fzdirxqm41x5dwfn-wlogout-1.2.2/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
+}
+
+#shutdown {
+    background-image: image(url("/nix/store/92rdwiipzag7bix2fzdirxqm41x5dwfn-wlogout-1.2.2/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+}
+
+#reboot {
+    background-image: image(url("/nix/store/92rdwiipzag7bix2fzdirxqm41x5dwfn-wlogout-1.2.2/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+}

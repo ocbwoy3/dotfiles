@@ -1,112 +1,64 @@
 /* Global */
 
-@import '../../.cache/wal/colors-waybar.css';
-
 * {
-	font-family: 'Symbols Nerd Font', 'Monaspace Neon', 'monospace', monospace;
+	font-family: 'Symbols Nerd Font', 'Monaspace Neon';
 	border: none;
-	border-radius: 0px;
+	font-size: 17px;
+	min-height: 10px;
 }
-
-/* Waybar */
 
 window#waybar {
-	border-bottom: 0px solid transparent;
 	background: transparent;
-	transition-property: all;
-	transition-duration: .5s;
 }
 
-/* Tooltips */
-
-tooltip {
-    border-radius: 15px;
-    background-color: @background;
-    opacity:0.8;
-    padding:20px;
-    margin:5px;
+window#waybar, #workspaces, #custom-music, #traygroup, #clock, #window {
+	border-radius: 8px;
+	padding: 3px 5px 3px 5px;
 }
 
-tooltip label {
-	color: @color6;
+#traygroup, #custom-music, #window, #workspaces {
+	background-color: #1e1e2e;
+	padding-left: 5px;
+	padding-right: 5px;
+	color: #b4befe;
 }
 
-/* Workspace Selector */
+#custom-music, #clock, #window {
+	padding-left: 10px;
+	padding-right: 10px;
+}
 
-#workspaces {
-	background: transparent;
-	margin-left: 5px;
-	margin-right: 5px;
-	border: 0px;
-	color: @color6;
-	font-weight: 900;
+#clock {
+	background-color: #1e1e2e;
+	color: #b4befe;
 }
 
 #workspaces button {
-	color: @color6;
+	color: #b4befe;
 }
 
 #workspaces button.active {
-	color: @color8;
-}
-
-#workspaces button:hover {
-	color: @color6;
-	background: transparent;
-}
-
-/* Window Title */
-
-#window {
-	color: @color6;
-}
-
-window#waybar.empty #window {
-	margin: 0px 0px 0px 0px;
-	padding: 0px 0px 0px 0px;
-	opacity: 0;
-}
-
-/* Modules */
-
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
-
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
-}
-
-/* Clock */
-
-#clock {
-	color: @color6;
+	color: #cba6f7;
 	font-weight: bolder;
 }
 
-/* PulseAudio */
-
-#pulseaudio {
-	color: @color6;
-}
-
-/* Network */
-
-#network {
-	color: @color6;
-}
-
-/* Bluetooth */
-
-#bluetooth {
-	color: @color6;
-}
-
-
-/* Tray */
-
 #tray {
-	padding: 0px 2px 0px 2px;
+	padding: 0px 5px 0px 5px;
+	margin: 0px 0px 0px 0px;
+	color: #b4befe;
+	background-color: #1e1e2e;
+}
+
+#tray menu {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	color: #b4befe;
+	background-color: #1e1e2e;
+}
+
+#network, #bluetooth, #pulseaudio {
+	padding: 0px 5px 0px 5px;
+	margin: 0px 0px 0px 0px;
 }
 
 #tray > .passive {
@@ -114,12 +66,19 @@ window#waybar.empty #window {
 }
 
 #tray > .needs-attention {
-	-gtk-icon-effect: highlight;
+    -gtk-icon-effect: highlight;
 }
 
-/* Music */
+/* Classes */
 
-#custom-music {
-	color: @color6;
-	padding-right: 5px;
+.invisible {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	background-color: transparent;
+}
+
+window#waybar.empty #window {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	background-color: transparent;
 }

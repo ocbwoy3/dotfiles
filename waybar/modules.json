@@ -2,6 +2,16 @@
 
 	// Custom Modules
 
+	"group/traygroup": {
+		"orientation": "inherit",
+		"modules": [
+			"tray",
+			"network",
+			"bluetooth",
+			"pulseaudio"
+		]
+	},
+
 	"custom/music": {
 		"return-type": "json",
 		"exec": "bash ~/dotfiles/scripts/waybar-music-status.sh",
@@ -26,12 +36,10 @@
 			"gemini.google.com_/app": "Gemini",
 			"PORTAL 2 - (OpenGL|Vulkan)": "Portal 2",
 			"(.*) - (.*) - Visual Studio Code": "󰨞  $1      $2",
-			"(.*) (— Mozilla Firefox|- Brave)": "$1",
-			"(.*) — (Mozilla Firefox Private Browsing": "$1"
+			"(.*) (— Mozilla Firefox( Private Browsing)?|— Brave)": "$1"
 		},
 		"separate-outputs": true
 	},
-
 
 	"hyprland/workspaces" : {        
 		"on-click": "activate",
