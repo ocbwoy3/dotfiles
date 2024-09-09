@@ -22,12 +22,10 @@ However, some things are different.
 
 idk how tables work in markdown, i tried my fuckin best to make this look good
 
-|---------------------|------------------|
 | Keybind             | What it does     |
-|=====================|==================|
+|---------------------|------------------|
 | `SUPER+T`           | App Launcher     |
 | `SUPER+SHIFT+ENTER` | Change wallpaper |
 | `SUPER+F1`          | Fake Fullscreen  |
 | `SUPER+F2`          | Roblox           |
 | `SUPER+Space`       | Keyboard Layout  |
-|---------------------|------------------|
