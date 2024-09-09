@@ -20,7 +20,14 @@ This rice *mostly* uses the Catppuccin Mocha color pallete. The Discord theme is
 Usually what you expect with the default Hyprland config, `SUPER+Q`, `SUPPER+ArrowUp`, `SUPER+C`, etc.
 However, some things are different.
 
-`SUPER+T` - App Launcher
-`SUPER+SHIFT+ENTER` - Switch wallpapers
-`SUPER+F1` - Fake Fullscreen (Roblox)
-`SUPER+F2` - Launch Roblox via [the wrapper provided](https://github.com/ocbwoy3/sober-bloxstraprpc-wrapper)
+idk how tables work in markdown, i tried my fuckin best to make this look good
+
+|---------------------|------------------|
+| Keybind             | What it does     |
+|=====================|==================|
+| `SUPER+T`           | App Launcher     |
+| `SUPER+SHIFT+ENTER` | Change wallpaper |
+| `SUPER+F1`          | Fake Fullscreen  |
+| `SUPER+F2`          | Roblox           |
+| `SUPER+Space`       | Keyboard Layout  |
+|---------------------|------------------|
