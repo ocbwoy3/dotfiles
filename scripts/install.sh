@@ -64,6 +64,9 @@ _setSymlinks() {
 	_symlink waybar ~/.config/waybar $HOME/dotfiles/waybar ~/.config
 	_symlink dunst ~/.config/dunst $HOME/dotfiles/dunst ~/.config
 
+    mkdir $HOME/Pictures
+    mkdir $HOME/Pictures/Screenshots
+
 	cd $CWD
 
 }
