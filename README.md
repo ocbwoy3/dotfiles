@@ -93,9 +93,11 @@ However, some things are different.
 | `CTRL+ALT+DEL`  | WLogout                                  |
 | `FN+F1`         | Steam Flatpak                            |
 
-| Keybind             | What it does                                                    |
-|---------------------|-----------------------------------------------------------------|
-| `SUPER+SHIFT+ENTER` | Change wallpaper                                                |
-| `SUPER+F1`          | Fake Fullscreen (Roblox)                                        |
-| `SUPER+F2`          | [Roblox](https://github.com/ocbwoy3/sober-bloxstraprpc-wrapper) |
-| `SUPER+Space`       | Switch Keyboard Layout (English, Latvian)                       |
+| Keybind             | What it does                                                     |
+|---------------------|------------------------------------------------------------------|
+| `SUPER+SHIFT+ENTER` | Change wallpaper                                                 |
+| `SUPER+F1`          | Fake Fullscreen (Roblox)                                         |
+| `SUPER+F2`          | [Roblox](https://github.com/ocbwoy3/sober-bloxstraprpc-wrapper)  |
+| `SUPER+F3`          | `/nix/store/*-cider2-0.0.1/Cidert/cider` (Arch Version, wrapped) |
+| `SUPER+F4`          | Steam (flatpak)                                                  |
+| `SUPER+Space`       | Switch Keyboard Layout (English, Latvian)                        |
