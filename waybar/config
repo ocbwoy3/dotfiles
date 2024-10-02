@@ -17,7 +17,9 @@
 		"hyprland/window"
 	],
 
-	"modules-center": [],
+	"modules-center": [
+		"custom/middle-split"
+	],
 
 	"modules-right": [
 		"custom/music",

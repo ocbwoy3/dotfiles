@@ -2,7 +2,7 @@
 
 function _processTitle {
 	sed -r ""
-	# wip this shit	
+	# i have no fucking idea how this regex works
 	# sed -r "s/(?!(.*(Eurobeat).*))(\(feat\. .*\)$| \- Friday Night Funkin'?:?.*$|(.*(Remix|Edited).*)$| \(.*Funkin.*\)$)/"
 }
 

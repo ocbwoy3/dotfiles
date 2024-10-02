@@ -8,6 +8,7 @@
 	imports =
 		[ # Include the results of the hardware scan.
 			./hardware-configuration.nix
+			# ./cloudflared.nix
 		];
 
 	boot.binfmt.registrations.appimage = {
@@ -79,6 +80,14 @@
 	};
 	# hardware.pulseaudio.enable = true;
 	hardware.bluetooth.enable = true;
+	services.blueman.enable = true;
+	hardware.bluetooth.settings = {
+		General = {
+			Experimental = true;
+			ControllerMode = "bredr";
+		};
+	};
+	hardware.enableAllFirmware = true;
 	services.xserver.enable = true;
 	services.xserver.videoDrivers = ["nvidia"];
 	services.displayManager.sddm = {
@@ -114,21 +123,41 @@
 		extraGroups = [ "networkmanager" "wheel" "input" ];
 		packages = with pkgs; [
 			brave
-			alacritty
 			prismlauncher
+			wezterm
 			gimp
+			mpv
+			modrinth-app
 		];
 	};
+
+	# i just want mc to use fuckin wayland
+	# users.users.ocbwoy3.packages.prismlauncher.override = { withWaylandGLFW = true };
 
 	# Allow unfree packages
 	nixpkgs.config.allowUnfree = true;
 	programs.gamemode.enable = true;
+	programs.gamemode.settings.general.renice = 0;
+	programs.gamemode.settings.general.ioprio = 0;
+	# programs.gamemode.desiredgov = "performance";
+	programs.gamemode.settings.general.softrealtime = "on";
+	programs.gamemode.settings.custom.start = "notify-send -u critical \"OCbwoy3's Dotfiles\" \"GameMode started\"";
+	programs.gamemode.settings.custom.end = "notify-send -u critical \"OCbwoy3's Dotfiles\" \"GameMode exited\"";
+	services.usbmuxd.enable = true;
 
 	# List packages installed in system profile. To search, run:
 	# $ nix search wget
 	environment.systemPackages = with pkgs; [
+		nix-direnv
+		unzip
+		ifuse
+		w3m
+		imagemagick
+		alacritty
+		libimobiledevice
 		catppuccin-sddm
 		vim
+		direnv
 		gnome.nautilus
 		qpwgraph
 		wget
@@ -157,13 +186,25 @@
 		blueman
 		arrpc
 		playerctl
-		vinegar
+		obs-studio
+		mangohud
+		jq
+		github-cli
+		file
+		# (pkgs.python3.withPackages (python-pkgs: [
+		# 	python-pkgs.discord-rich-presence
+		# ]))
+		# python3.withPackages.discord-rich-presence
 	];
+
+	boot.supportedFilesystems = [ "ntfs" ];
 
 	fonts.packages = with pkgs; [
 		monaspace
 		nerdfonts
 	];
+
+	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 	programs.nix-ld.enable = true;
 	programs.nix-ld.libraries = with pkgs; [
