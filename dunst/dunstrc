@@ -15,7 +15,7 @@
 	shrink = no
 	transparency = 30
 	notification_height = 0
-	separator_height = 2
+	separator_height = 1
 	padding = 8
 	horizontal_padding = 8
 	text_icon_padding = 0
@@ -23,13 +23,14 @@
 	frame_width = 1
 	frame_color = "#1e1e2e"
 
-	separator_color = auto
+	separator_color = foreground
 
 	sort = yes
 	idle_threshold = 120
 
 	### Progressbar ###
 	progress_bar = true
+	progress_bar_color = "#ff00ff"
 	progress_bar_height = 10
 	progress_bar_frame_width = 1
 	progress_bar_min_width = 150
@@ -67,8 +68,8 @@
 	notification_limit = 20
 
 	### Misc/Advanced ###
-	dmenu = /usr/bin/dmenu -p dunst:
-	browser = /usr/bin/brave
+	dmenu = w -p dunst:
+	browser = brave
 	always_run_script = true
 	title = Dunst
 	class = Dunst
@@ -79,7 +80,7 @@
 
 	force_xinerama = false
 
-	mouse_left_click = do_action
+	mouse_left_click = "do_action, open_url, close_current" 
 	mouse_middle_click = close_all
 	mouse_right_click = close_current
 
@@ -109,3 +110,40 @@
 	foreground = "#f38ba8"
 	frame_color = "#f38ba8"
 	timeout = 10
+
+[hyprland_general]
+	summary = "Hyprland"
+	background = "#1e1e2e"
+	frame_color = "#f9e2af"
+	foreground = "#f9e2af"
+
+[hyprland_welcome]
+	summary = "Welcome to Hyprland!"
+	background = "#1e1e2e"
+	frame_color = "#a6e3a1"
+	foreground = "#a6e3a1"
+	timeout = 10
+
+[dotfiles_general]
+	summary = "OCbwoy3's Dotfiles"
+	background = "#1e1e2e"
+	frame_color = "#fab387"
+	foreground = "#fab387"
+
+[dotfiles_screenshot]
+	summary = "Screenshot"
+	background = "#1e1e2e"
+	frame_color = "#89dceb"
+	foreground = "#89dceb"
+
+[roblox_wrapper_general]
+	summary = "Roblox"
+	background = "#1e1e2e"
+	frame_color = "#f2cdcd"
+	foreground = "#f2cdcd"
+
+[roblox_wrapper_regretevator]
+	summary = "Regretevator"
+	background = "#1e1e2e"
+	frame_color = "#f5c2e7"
+	foreground = "#f5c2e7"
