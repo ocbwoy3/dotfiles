@@ -98,6 +98,6 @@ However, some things are different.
 | `SUPER+SHIFT+ENTER` | Change wallpaper                                                 |
 | `SUPER+F1`          | Fake Fullscreen (Roblox)                                         |
 | `SUPER+F2`          | [Roblox](https://github.com/ocbwoy3/sober-bloxstraprpc-wrapper)  |
-| `SUPER+F3`          | `/nix/store/*-cider2-0.0.1/Cidert/cider` (Arch Version, wrapped) |
+| `SUPER+F3`          | `/nix/store/*-cider2-0.0.1/Cider/cider` (Arch Version, wrapped)  |
 | `SUPER+F4`          | Steam (flatpak)                                                  |
 | `SUPER+Space`       | Switch Keyboard Layout (English, Latvian)                        |
