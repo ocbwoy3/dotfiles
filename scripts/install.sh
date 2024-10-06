@@ -30,27 +30,6 @@ _symlink() {
     fi
 }
 
-_backupPreviousDotfiles() {
-	if [[ -d "$HOME/dotfiles" ]]; then
-		echo "Found an existing dotfiles folder, backing up."
-		sudo cp -r $HOME/dotfiles $HOME/dotfiles_old
-		echo "Your current dotfiles have been backed up to $HOME/dotfiles_old"
-		read -e -p "Press enter to continue installing... " choice
-		sudo rm -rf $HOME/dotfiles
-	else
-		echo "Could not find dotfiles folder, ignoring backup"
-	fi
-}
-
-_gitCloneRepo() {
-	if [[ -d "$HOME/dotfiles" ]]; then
-		echo "Dotfiles folder folder already exists"
-	else
-		echo "Git cloning the dotfiles"
-		git clone https://github.com/ocbwoy3/dotfiles $HOME/dotfiles
-	fi
-}
-
 _gitCloneWallpaperRepo() {
 	if [[ -d "$HOME/wallpaper" ]]; then
 		echo "Wallpaper folder folder already exists"
@@ -60,50 +39,21 @@ _gitCloneWallpaperRepo() {
 	fi
 }
 
-
-
-_installGit() {
-	if [[ -f "/usr/bin/git" ]]; then
-		echo "Git is already installed"
-	else
-		echo "Installing git"
-		sudo pacman -Syy git
-	fi
-}
-
-_installYay() {
-	if [[ -f "/usr/bin/yay" ]]; then
-		echo "Yay is already installed"
-	else
-		echo "Installing yay"
-		git clone https://aur.archlinux.org/yay.git /tmp/.yay_install
-		cd /tmp/.yay_install
-		makepkg -si
-		cd $CWD
-		sudo rm -rf /tmp/.yay_install
-	fi
-}
-
 _installDependencies() {
-	sudo pacman -S hyprland hyprpaper hyprlock hyprpaper
-	sudo pacman -S alacritty bluez bluez-utils blueman
-	sudo pacman -S pulseaudio pulseaudio-bluetooth pavucontrol
-	sudo pacman -S wl-clipboard xclip swappy playerctl flatpak
-	sudo pacman -S sddm esbuild fuse polkit-gnome swww python-pywal python-pip
-	sudo pacman -S xdg-desktop-portal xdg-desktop-portal-hyprland
-
-	sudo pacman -S ttf-nerd-fonts-symbols otf-monaspace
-	yay -S wlogout arrpc linux-discord-rich-presence
-
+	
 	sudo chmod +x $HOME/dotfiles/scripts/rich-presence.py
 
+    # automatically installs sober-bloxstraprpc-wrapper for you.
+
+    mkdir $HOME/Projects
+    cd $HOME/Projects
+    git clone https://github.com/ocbwoy3/sober-bloxstraprpc-wrapper
+    cd $HOME/Projects/sober-bloxstraprpc-wrapper
+    npm i
+    
+	flatpak install --user https://sober.vinegarhq.org/sober.flatpakref
 	flatpak install dev.vencord.Vesktop
 
-	# Configure dependencies after install
-
-	sudo systemctl enable bluetooth.service
-	systemctl enable --user pulseaudio.service pulseaudio.socket
-	sudo systemctl enable sddm
 }
 
 _setSymlinks() {
@@ -114,41 +64,15 @@ _setSymlinks() {
 	_symlink waybar ~/.config/waybar $HOME/dotfiles/waybar ~/.config
 	_symlink dunst ~/.config/dunst $HOME/dotfiles/dunst ~/.config
 
+    mkdir $HOME/Pictures
+    mkdir $HOME/Pictures/Screenshots
+
 	cd $CWD
 
 }
 
-_abortInstall() {
-	echo "Aborting"
-	exit
-}
+_gitCloneWallpaperRepo
+_setSymlinks
+_installDependencies
 
-clear
-echo "This is the installer script for OCbwoy3's dotfiles."
-echo "This will only work in Arch-Based distros which let you install packages from the AUR. Install at your own risk." 
-
-read -e -p "Do you want to continue? [y/N] > " choice
-[[ "$choice" == [Yy]* ]] && echo "" || _abortInstall 
-
-if [ "$EUID" -ne 0 ]; then
-
-	echo "Installing prerequisites"
-	_installGit
-	_installYay
-
-	echo "Installing OCbwoy3's dotfiles"
-	_backupPreviousDotfiles
-	_gitCloneRepo
-	_setSymlinks
-	
-	_gitCloneWallpaperRepo
-	
-	echo "Installing dependencies"
-	_installDependencies
-
-	echo "OCbwoy3's Dotfiles have been successfully installed. A reboot is recommended."
-else
-	echo "This script is running with root privileges, please avoid running this as root."
-fi
-
-cd $CWD
+echo "OCbwoy3's Dotfiles have been successfully installed. Rebuild your config, then reboot."

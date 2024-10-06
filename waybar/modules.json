@@ -2,6 +2,20 @@
 
 	// Custom Modules
 
+	"group/traygroup": {
+		"orientation": "inherit",
+		"modules": [
+			"tray",
+			"network",
+			"bluetooth",
+			"pulseaudio"
+		]
+	},
+
+	"custom/middle-split": {
+		"format": " "
+	},
+
 	"custom/music": {
 		"return-type": "json",
 		"exec": "bash ~/dotfiles/scripts/waybar-music-status.sh",
@@ -11,7 +25,8 @@
 		"on-click": "playerctl play-pause",
 		"on-click-right": "playerctl next",
 		"on-click-middle": "playerctl previous",
-		"smooth-scrolling-treshold": 40
+		"smooth-scrolling-treshold": 40,
+		"max-length": 60
 	},
 
 	// Default modules
@@ -26,12 +41,10 @@
 			"gemini.google.com_/app": "Gemini",
 			"PORTAL 2 - (OpenGL|Vulkan)": "Portal 2",
 			"(.*) - (.*) - Visual Studio Code": "󰨞  $1      $2",
-			"(.*) (— Mozilla Firefox|- Brave)": "$1",
-			"(.*) — (Mozilla Firefox Private Browsing": "$1"
+			"(.*) (— Mozilla Firefox( Private Browsing)?|— Brave)": "$1"
 		},
 		"separate-outputs": true
 	},
-
 
 	"hyprland/workspaces" : {        
 		"on-click": "activate",

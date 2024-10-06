@@ -1,10 +1,10 @@
 {
 	// Position (Top)
 	"layer": "top",
-	"margin-top": 8,
-	"margin-bottom": -16,
+	"margin-top": 6,
+	"margin-bottom": -12,
 	"margin-left": 8,
-	"margin-right": 16,    
+	"margin-right": 8,    
 	"spacing": 10,
 
 	// Includes
@@ -17,14 +17,13 @@
 		"hyprland/window"
 	],
 
-	"modules-center": [],
+	"modules-center": [
+		"custom/middle-split"
+	],
 
 	"modules-right": [
 		"custom/music",
-		"network",
-		"bluetooth",
-		"pulseaudio",
-		"tray",
+		"group/traygroup",
 		"clock"
 	]
 

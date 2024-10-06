@@ -4,7 +4,7 @@ WAYBAR_PID=$(pidof -s waybar)
 
 if [ ${#WAYBAR_PID} -gt 0 ]; then
 
-    killall -9 waybar
+    kill -9 $(pidof waybar)
 
     hyprctl keyword general:gaps_in 0
     hyprctl keyword general:gaps_out 0
