@@ -147,3 +147,9 @@
 	background = "#1e1e2e"
 	frame_color = "#f5c2e7"
 	foreground = "#f5c2e7"
+
+[roblox_wrapper_regretevator_npc_chat]
+	appname = "regretevator-npc-chat"
+	background = "#1e1e2e"
+	frame_color = "#f5c2e7"
+	foreground = "#f5c2e7"

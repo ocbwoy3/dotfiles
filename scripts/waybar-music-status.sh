@@ -9,9 +9,9 @@ function _processTitle {
 SONG="$(playerctl metadata title -s)"
 
 if [ ${#SONG} -gt 0 ] ; then
-	BRUH1=$( echo "  $(playerctl metadata artist | sed -r "s/( \& Minecraft$)//") — $(playerctl metadata title -s)" | _processTitle | sed -r "s/(^[ ]*)|([ ]*$)//g" | sed -r 's/\&/\&amp;/g' | sed -r 's/\"/\&quot;/g' | sed -r "s/'/\&apos;/g" )
+	BRUH1=$( echo "  $(playerctl metadata artist) — $(playerctl metadata title -s)" | sed -r "s/(^[ ]*)|([ ]*$)//g" | sed -r 's/\&/\&amp;/g' | sed -r 's/\"/\&quot;/g' | sed -r "s/'/\&apos;/g" )
 	BRUH2=$( echo "$(playerctl metadata album)" | sed -r 's/\&/\&amp;/g' | sed -r 's/\"/\&quot;/g' | sed -r "s/'/\&apos;/g" )
-	printf "{\"text\": \"$BRUH1\", \"tooltip\": \"$BRUH2\", \"class\":\"music\" }"
+	printf "{\"text\": \"$BRUH1\", \"tooltip\": \"$BRUH1\\\\n  $BRUH2\", \"class\":\"music\" }"
 else
 	printf "{\"text\": \"\", \"tooltip\": \" \", \"class\":\"invisible\" }"
 fi

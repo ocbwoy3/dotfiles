@@ -15,6 +15,22 @@ To get started, in your home directory, clone this repo, then replace your `conf
 
 This rice *mostly* uses the Catppuccin Mocha color pallete. The Discord theme is [system24](https://github.com/refact0r/system24).
 
+## How 2 Play Roblox
+
+Install Sober with `flatpak install --user "https://sober.vinegarhq.org/sober.flatpakref"`
+
+Git clone [TuxStrap](https://github.com/ocbwoy3/tuxstrap) into `~/Projects/`.
+
+Then press `SUPER+F2`.
+
+![Current floor number on waybar, it will also show you who you're spectating, or if you died or not.](media/dotfilesfont_use.png)
+
+If you see `ý` instead of a custom symbol (if it's shown), you need to install the dotfiles font!
+
+Copy `DotfilesFont.otf` to `~/.local/share/fonts` and run `fc-cache`, then reload waybar.
+
+If you want to, you can see the font by opening `DotfilesFont.sfd` in FontForge.
+
 ## Keybindings
 
 Usually what you expect with the default Hyprland config, `SUPER+Q`, `SUPPER+ArrowUp`, `SUPER+C`, etc.

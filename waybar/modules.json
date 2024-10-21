@@ -29,6 +29,11 @@
 		"max-length": 60
 	},
 
+	"custom/regretevator_state": {
+		"restart-interval": 1,
+		"exec": "cat ~/.regretevator_state"
+	},
+
 	// Default modules
 
 	"hyprland/window": {

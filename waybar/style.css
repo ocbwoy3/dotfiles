@@ -11,16 +11,20 @@ window#waybar {
 	background: transparent;
 }
 
-window#waybar, #workspaces, #custom-music, #traygroup, #clock, #window {
+window#waybar, #workspaces, #custom-music, #traygroup, #clock, #window, #custom-regretevator_state {
 	border-radius: 8px;
 	padding: 3px 5px 3px 5px;
 }
 
-#traygroup, #custom-music, #window, #workspaces {
+#traygroup, #custom-music, #window, #workspaces, #custom-regretevator_state {
 	background-color: #1e1e2e;
 	padding-left: 5px;
 	padding-right: 5px;
 	color: #b4befe;
+}
+
+#custom-regretevator_state {
+	font-family: 'DotfilesFont', 'Symbols Nerd Font', 'Monaspace Neon';
 }
 
 #custom-music, #clock, #window {
