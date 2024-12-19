@@ -14,14 +14,14 @@ def cmd(command) -> str:
 
 hyprland_version = cmd("hyprctl version -j | jq .tag").replace('\"','')
 nixos_version = cmd("nixos-version")
-nixos_version_simple = re.search('^([0-9]+\.?([0-9]+)?)',nixos_version)[0] + " (" + re.search('\([A-Za-z0-9]+\)$',nixos_version)[0].replace("(","").replace(")","") + ")"
+nixos_version_simple = re.search('^([0-9]+\.?([0-9]+)?(pre)?)',nixos_version)[0] + " (" + re.search('\([A-Za-z0-9]+\)$',nixos_version)[0].replace("(","").replace(")","") + ")"
 
 def update():
 
 	client.set_activity(
 		pid = 1,
 		state = f"Hyprland {hyprland_version}",
-		details = nixos_version_simple,
+		details = f"NixOS {nixos_version_simple}",
 		large_image = "nixos",
 		large_text = "NixOS",
 		small_image = "https://avatars.githubusercontent.com/u/107882187",

@@ -2,3 +2,5 @@ wallpaper/
 wallpaper_2/
 hypr.conf
 do_not_show.md
+*.conf-bak
+private/bin

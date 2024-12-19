@@ -17,7 +17,7 @@ if [ ${#WALLPAPER} -gt 0 ] ; then
 	notify-send -t 2000 -u low "OCbwoy3's Dotfiles" "Setting wallpaper"
 
 	swww img $HOME/wallpaper/$WALLPAPER --transition-fps 300 --transition-duration 2 &
-bash ~/dotfiles/scripts/hot-reload.sh
+	# bash ~/dotfiles/scripts/hot-reload.sh
 
 else
 	printf "not changing wallpaper\n"

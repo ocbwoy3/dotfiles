@@ -20,18 +20,24 @@
 		"return-type": "json",
 		"exec": "bash ~/dotfiles/scripts/waybar-music-status.sh",
 		"restart-interval": 1,
-		"on-scroll-up": "playerctl volume 0.05+",
-		"on-scroll-down": "playerctl volume 0.05-",
-		"on-click": "playerctl play-pause",
-		"on-click-right": "playerctl next",
-		"on-click-middle": "playerctl previous",
+		"on-scroll-up": "playerctl -p cider volume 0.05+",
+		"on-scroll-down": "playerctl -p cider volume 0.05-",
+		"on-click": "playerctl -p cider play-pause",
+		"on-click-right": "playerctl -p cider next",
+		"on-click-middle": "playerctl -p cider previous",
 		"smooth-scrolling-treshold": 40,
 		"max-length": 60
 	},
 
 	"custom/regretevator_state": {
 		"restart-interval": 1,
+		"return-type": "json",
 		"exec": "cat ~/.regretevator_state"
+	},
+
+	"custom/electoral_college" : {
+		"format": "HARRIS 538 | 0 TRUMP",
+		"tooltip-format": "PRESIDENTAL ELECTION (270 TO WIN)\n(DEM) Kamala Harris | 538 electoral votes 100%\n(GOP) Donald Trump  |   0 electoral votes   0%"
 	},
 
 	// Default modules
@@ -42,9 +48,13 @@
 			"Cider": "Apple Music",
 			"SCPSL": "SCP: Secret Laboratory",
 			"Sober": "Roblox",
+			"roblox_wrapped - (.*)": "$1",
 			"Minecraft: Forge Loading...": "Minecraft",
+			"^Minecraft\\*? ([0-9\\.]+)": "Minecraft", 
+			"^Minecraft\\*? ([0-9\\.]+) - (Singleplayer|Multiplayer \\(3rd-party Server\\)))$": "Minecraft",
 			"gemini.google.com_/app": "Gemini",
 			"PORTAL 2 - (OpenGL|Vulkan)": "Portal 2",
+			"HALF-LIFE 2 - (OpenGL|Vulkan)": "Half-Life 2",
 			"(.*) - (.*) - Visual Studio Code": "󰨞  $1      $2",
 			"(.*) (— Mozilla Firefox( Private Browsing)?|— Brave)": "$1"
 		},
@@ -55,6 +65,7 @@
 		"on-click": "activate",
 		"active-only": false,
 		"all-outputs": true,
+		"show-special": false,
 		"format": "{}",
 		"format-icons": {
 			"urgent": "",
@@ -79,14 +90,15 @@
 
 	"pulseaudio": {
 		"format": "{icon}  {volume}%",
-		"format-bluetooth": "{icon} {volume}%",
-		"format-bluetooth-muted": "󰖁 {volume}%",
-		"format-muted": "󰖁 {volume}%",
+		// "format-bluetooth": "{icon} {volume}%",
+		// "format-bluetooth-muted": " 0%",
+		"format-muted": " 0%",
 		"format-source": " {volume}%",
 		"format-source-muted": "",
 		"format-icons": {
 			"default": ["", "", ""]
 		},
+		"tooltip-format": "{desc}\n{icon} {volume}%",
 		"on-click": "pavucontrol"
 	},
 

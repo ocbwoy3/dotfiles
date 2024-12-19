@@ -1,17 +1,16 @@
 #!/bin/bash
 
-function _processTitle {
-	sed -r ""
-	# i have no fucking idea how this regex works
-	# sed -r "s/(?!(.*(Eurobeat).*))(\(feat\. .*\)$| \- Friday Night Funkin'?:?.*$|(.*(Remix|Edited).*)$| \(.*Funkin.*\)$)/"
+function _sanitize {
+	sed -r "s/(^[ ]*)|([ ]*$)//g" | sed -r 's/\&/\&amp;/g' | sed -r 's/\"/\&quot;/g' | sed -r "s/'/\&apos;/g"
 }
 
-SONG="$(playerctl metadata title -s)"
+# {{artist}} — {{title}}
 
-if [ ${#SONG} -gt 0 ] ; then
-	BRUH1=$( echo "  $(playerctl metadata artist) — $(playerctl metadata title -s)" | sed -r "s/(^[ ]*)|([ ]*$)//g" | sed -r 's/\&/\&amp;/g' | sed -r 's/\"/\&quot;/g' | sed -r "s/'/\&apos;/g" )
-	BRUH2=$( echo "$(playerctl metadata album)" | sed -r 's/\&/\&amp;/g' | sed -r 's/\"/\&quot;/g' | sed -r "s/'/\&apos;/g" )
-	printf "{\"text\": \"$BRUH1\", \"tooltip\": \"$BRUH1\\\\n  $BRUH2\", \"class\":\"music\" }"
+SONGNAME="$( playerctl -s -p cider metadata -f "{{artist}} — {{title}}" | _sanitize )"
+ALBUMNAME="$( playerctl -s -p cider metadata album | _sanitize )"
+
+if [ ${#SONGNAME} -gt 0 ] ; then
+		printf "{\"text\": \"  $SONGNAME\", \"tooltip\": \"$ALBUMNAME\", \"class\":\"music\" }"
 else
 	printf "{\"text\": \"\", \"tooltip\": \" \", \"class\":\"invisible\" }"
 fi

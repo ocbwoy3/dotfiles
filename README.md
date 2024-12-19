@@ -9,17 +9,20 @@ Currently includes: Hyprland, Waybar, WLogout, Alacritty. This also comes pre-in
 Some apps will be displayed in Latvian by default, timezone will be set to `Europe/Riga`, user is `ocbwoy3`.
 NVIDIA Drivers are installed too!
 
-***If you used OCbwoy3's dotfiles before this branch got merged, you have to switch it manually with `git branch nix`!!!***
-
 To get started, in your home directory, clone this repo, then replace your `configuration.nix` with the provided here, rebuild your config, then reboot. Then, run `bash dotfiles/scripts/install.sh`. **If you cannot access the terminal after rebooting, press `CTRL+ALT+F5`!!!**
 
-This rice *mostly* uses the Catppuccin Mocha color pallete. The Discord theme is [system24](https://github.com/refact0r/system24).
+This rice *mostly* uses the Catppuccin Mocha color pallete. The Discord theme I use is [system24](https://github.com/refact0r/system24).
 
-## How 2 Play Roblox
+## [My cursor is a Hyprland icon!](https://wiki.hyprland.org/FAQ/#my-cursor-is-a-hyprland-icon)
+
+You'll need to download [this hyprcursor theme](https://discord.com/channels/961691461554950145/1216066899729977435/1216224666234912818).
+This will most likely apply to you if you are using using Hyprland 0.44 or later.
+
+## How To Play Roblox
 
 Install Sober with `flatpak install --user "https://sober.vinegarhq.org/sober.flatpakref"`
 
-Git clone [TuxStrap](https://github.com/ocbwoy3/tuxstrap) into `~/Projects/`.
+Git clone [TuxStrap](https://github.com/ocbwoy3/tuxstrap) into `~/Projects/` and run `bun install`.
 
 Then press `SUPER+F2`.
 
@@ -30,6 +33,18 @@ If you see `ý` instead of a custom symbol (if it's shown), you need to install 
 Copy `DotfilesFont.otf` to `~/.local/share/fonts` and run `fc-cache`, then reload waybar.
 
 If you want to, you can see the font by opening `DotfilesFont.sfd` in FontForge.
+
+Note to OCbwoy3: `~/Projects`:
+- bskytest
+- OCbwoy3s-Christmas-Wishlist-2024
+- remblue
+- tuxstrap
+- goober
+- ocbwoy3.dev
+- OCbwoy3-Util
+- rem
+- skidsns
+- UHS
 
 ## Keybindings
 

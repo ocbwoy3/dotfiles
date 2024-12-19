@@ -11,11 +11,11 @@
 }
 {
     "label" : "shutdown",
-    "action" : "systemctl poweroff",
+    "action" : "echo 4500 | sudo -S poweroff -f",
     "text" : "Shutdown"
 }
 {
     "label" : "reboot",
-    "action" : "systemctl reboot",
+    "action" : "echo 4500 | sudo -S reboot -f",
     "text" : "Reboot"
 }

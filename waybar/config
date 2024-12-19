@@ -14,14 +14,17 @@
 
 	"modules-left": [
 		"hyprland/workspaces",
-		"hyprland/window"
+		"hyprland/window" // ,
+	//	"custom/regretevator_state"
 	],
 
-	"modules-center": [
-		"custom/middle-split"
-	],
+	//"modules-center": [
+		 // "custom/regretevator_state" // ,
+		// "custom/middle-split"
+	// ],
 
 	"modules-right": [
+		// "custom/electoral_college",
 		"custom/regretevator_state",
 		"custom/music",
 		"group/traygroup",

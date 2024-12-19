@@ -2,7 +2,7 @@
 
 kill -9 $(pidof waybar)
 
-hyprctl dispatch exec "waybar -c ~/dotfiles/waybar/config -s ~/dotfiles/waybar/style.css" &
+hyprctl dispatch exec "GTK_THEME=Adwaita waybar -c ~/dotfiles/waybar/config -s ~/dotfiles/waybar/style.css" &
 hyprctl reload
 
 ROBLOX_PID="$(pidof sober)"

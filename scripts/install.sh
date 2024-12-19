@@ -47,12 +47,12 @@ _installDependencies() {
 
     mkdir $HOME/Projects
     cd $HOME/Projects
-    git clone https://github.com/ocbwoy3/sober-bloxstraprpc-wrapper
-    cd $HOME/Projects/sober-bloxstraprpc-wrapper
+    git clone https://github.com/ocbwoy3/tuxstrap
+    cd $HOME/Projects/tuxstrap
     npm i
     
 	flatpak install --user https://sober.vinegarhq.org/sober.flatpakref
-	flatpak install dev.vencord.Vesktop
+	# flatpak install dev.vencord.Vesktop
 
 }
 

@@ -11,6 +11,8 @@ notify-send "Screenshot" "Saved and copied to clipboard."
 notify-send "TuxStrap" -h int:value:33 "(1/3) Applying File Modifications to Roblox"
 notify-send "Regretevator" "Do I see Regretevator?"
 notify-send "Regretevator" "Floor 729"
+notify-send "Regretevator" "Floor 729 - 49/50" # 50 floor challenge thing
+
 
 # Other
 # notify-send "Notification" "with default urgency"

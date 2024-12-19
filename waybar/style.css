@@ -1,22 +1,23 @@
 /* Global */
 
 * {
-	font-family: 'Symbols Nerd Font',  'Monaspace Neon';
+	font-family: 'MonaspiceNe Nerd Font', 'Symbols Nerd Font', 'Monaspace Neon';
 	border: none;
-	font-size: 17px;
+	font-size: 15px;
 	min-height: 10px;
+	/* max-height: 10px;*/
 }
 
 window#waybar {
 	background: transparent;
 }
 
-window#waybar, #workspaces, #custom-music, #traygroup, #clock, #window, #custom-regretevator_state {
+window#waybar, #workspaces, #custom-music, #traygroup, #clock, #window, #custom-regretevator_state, #custom-electoral_college {
 	border-radius: 8px;
 	padding: 3px 5px 3px 5px;
 }
 
-#traygroup, #custom-music, #window, #workspaces, #custom-regretevator_state {
+#traygroup, #custom-music, #window, #workspaces, #custom-regretevator_state, #custom-electoral_college {
 	background-color: #1e1e2e;
 	padding-left: 5px;
 	padding-right: 5px;

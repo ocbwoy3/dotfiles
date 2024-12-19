@@ -18,6 +18,6 @@ if [ "$HYPRGAMEMODE" = 1 ] ; then
     pkill -9 waybar
     exit
 fi
-hyprctl dispatch exec waybar
-hyprctl reload
+bash ~/dotfiles/scripts/hot-reload.sh
+# hyprctl reload
 notify-send -t 5000 -u critical "OCbwoy3's Dotfiles" "Disabled game mode"
